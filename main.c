@@ -19,9 +19,14 @@ int		main(void)
 	char	buffer[1000];
 	char	*tmp2;
 	int fd;
+	char buf[10];
 
 	r = 0;
 	i = 0;
+
+	if (ft_write(1, "a", 1) == -1)
+		printf("error %s\n", strerror(errno));
+	
 	while (i < 100)
 		buffer[i++] = 0;
 
@@ -80,8 +85,8 @@ int		main(void)
 	printf("-done\n");
 	printf("\n--read (Makefile)\n");
 	fd = open("Makefile", O_RDONLY);
-	ii =  ft_read(fd, buffer, 200);
-	buffer[ii] = '\n';
+	i =  ft_read(fd, buffer, 200);
+	buffer[i] = '\n';
 	ft_write(1, buffer, ft_strlen(buffer));
 	printf("-done\n");
 

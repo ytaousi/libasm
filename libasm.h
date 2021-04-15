@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <errno.h>
 #include "fcntl.h"
 
 ssize_t ft_read(int fildes, void *buf, size_t nbyte);

@@ -21,7 +21,8 @@ _ft_write:								; fd = rdi, buffer = rsi, bytes = rdx
 			jc error
 			ret
 
-error:			push rax		;save errno
+error:		
+			push rax		;save errno
 			call ___error		;point rax to the external variable errno
 			pop  qword[rax]
 			mov  rax,-1

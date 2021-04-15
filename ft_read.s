@@ -22,7 +22,8 @@ _ft_read:								; fd = rdi, buffer = rsi, bytes = rdx
 			jc		error
 			ret
 
-error:			push rax
+error:		
+			push rax
 			call ___error
 			pop  qword[rax]
 			mov  rax,-1
