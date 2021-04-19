@@ -8,9 +8,9 @@ RESOURCES FOR SYSTEM CALLS ID'S :
 Initiation au langage d'assemblage :
     https://www.esaracco.fr/documentation/assembly/assembly/
 
-rax is the 64-bit, "long" size register.  It was added in 2003. 
-eax is the 32-bit, "int" size register.  It was added in 1985.
-ax is the 16-bit, "short" size register.  It was added in 1979.
+rax is the 64-bit, "long" size register.  
+eax is the 32-bit, "int" size register.  
+ax is the 16-bit, "short" size register.  
 al and ah are the 8-bit, "char" size parts of the register.  al is the low 8 bits (like ax&0xff), ah is the high 8 bits (like ax>>8)
 
 What do square brackets mean in assembly? :
