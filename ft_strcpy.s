@@ -3,16 +3,12 @@
 ; delete RDX, RCX, RAX
 
 _ft_strcpy:									; dst = rdi, src = rsi
-			xor		rcx, rcx				; i = 0
-			xor		rdx, rdx				; tmp = 0
-			cmp		rsi, 0					; !rsi
-			jz		return
-			jmp		copy
+			mov		r10, rdi				; rcx = counter = 0
+			mov		r11, rsi				
+			mov		rcx, 0					
 increment:
 			inc		rcx
 copy:
-			mov		dl, BYTE [rsi + rcx]
-			mov		BYTE [rdi + rcx], dl
 			cmp		dl, 0
 			jnz		increment
 return:
