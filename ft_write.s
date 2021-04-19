@@ -12,6 +12,7 @@ _ft_write:								; fd = rdi, buffer = rsi, bytes = rdx
 error:		
 			push rax		;save errno
 			call ___error		;point rax to the external variable errno
-			pop  qword[rax]
+			pop r9
+			mov [rax], r9
 			mov  rax,-1
 			ret
