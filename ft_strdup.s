@@ -1,8 +1,6 @@
 			global	_ft_strdup
 			extern	_malloc
 
-; DELETE RDX, RCX, RAX and everything that malloc destroy
-
 _ft_strdup:									; rdi = src
 			cmp		rdi, 0
 			jz		error					; src is NULL
