@@ -13,6 +13,7 @@ _ft_read:								; fd = rdi, buffer = rsi, bytes = rdx
 error:		
 			push rax
 			call ___error
-			pop  qword[rax]
+			pop  r9
+			mov [rax], r9
 			mov  rax,-1
 			ret
