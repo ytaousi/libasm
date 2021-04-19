@@ -1,6 +1,5 @@
                         section .text
                         global _ft_strcpy
-; delete RDX, RCX, RAX
 
 _ft_strcpy:									; dst = rdi, src = rsi
 			mov		r10, rdi				; rcx = counter = 0
